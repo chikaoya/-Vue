@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //计算俩数之和
+  function getSum(){
+    let num1 = +prompt('请输入第一个数')
+    let num2 = +prompt('请输入第二个数')
+    let sum = num1 +num2
+  alert(`结果是${sum}`)
+  }
+getSum()
+
+// 计算1-100之和
+ function getSum2(){
+  let sum =0
+  for(let i=1;i<=100;i++){
+    sum += i
+  }
+  alert(`调用函数值为${sum}`)
+ }
+ getSum2()
+  </script>
+</body>
+</html>

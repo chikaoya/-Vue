@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function Pig(name){
+    //   this.name = name 
+    // }
+    // const peiqi =new Pig('佩奇')
+    // const qiaozhi =new Pig('佩乔治')
+    // peiqi.name ='小猪佩奇'
+    // peiqi.sayHi=()=>{
+    //   console.log('Hi~~~');
+    // }
+    // // 虽然构造的函数是相同的但是地址是不同的，因为名字不同所以开辟了不同的地址
+    // console.log(peiqi);
+    // console.log(qiaozhi);
+    // console.log(peiqi===qiaozhi);//false
+      
+    // 静态成员：构造函数上的属性和方法称为静态成员
+    function Pig(name){
+      this.name=name
+    }
+    Pig.eyes=2
+    Pig.sayHi=function(){
+      console.log(this);
+    }
+    Pig.sayHi()//指向这个函数this.name=name
+    console.log(Pig.eyes);//2
+  </script>
+</body>
+</html>

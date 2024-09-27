@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1.for循环输出1-100岁
+    /* for (let i=1;i<=100;i++){
+      document.write(i+'岁<br>')
+    } */
+    // 2.for循环输出1-100所有偶数和
+    /* let sum=0
+    for(let i =1 ; i<=100 ;i++){
+      if(i%2===0){
+        sum +=i
+      }
+    }
+    document.write(`偶数和为:${sum}`) */
+    //3.页面中打印5个星星
+    /* for(let i=1;i<=5;i++){
+      document.write('*'+'<br>')
+    } */
+    //4.打印数组
+    let arr =['周恩来','周国威','周公','姜子牙']
+    for(let i=0 ;i<=arr.length-1;i++){
+      document.write(arr[i]+'<br>')
+    }
+  </script>
+</body>
+</html>
