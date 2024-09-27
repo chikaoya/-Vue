@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    //遍历对象
+   /*  let obj={
+      uname:'andy',
+      age:18,
+      gengder:'男'
+    }
+    for (k in obj){
+      console.log(k);
+      console.log(obj[k]);
+    } */
+
+    //遍历数组对象
+    let students =[
+      {name:'小明',age:'18',gengder:'男',address:'河北省'},
+      {name:'小红',age:'19',gengder:'女',address:'河南省'},
+      {name:'小刚',age:'17',gengder:'男',address:'山西省'},
+      {name:'小丽',age:'18',gengder:'女',address:'山东省'},
+    ]
+
+    for(i=0;i<students.length;i++){
+      // 打印索引下标
+      // console.log(i);
+      // 打印数组
+      console.log(students[i])
+      // 打印对象数组名字
+      console.log(students[i].name);
+      console.log(students[i[i]]);
+    }
+  </script>
+</body>
+</html>

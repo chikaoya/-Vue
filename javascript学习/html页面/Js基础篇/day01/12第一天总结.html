@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+
+    变量使用场景
+  变量声明有三个 var let 和const
+  var 不用了 
+  const 是常量声明，不用改变。
+  let 可以声明一些可改变的数据
+  模板字符串
+  ` ${ ? ?} `
+  基本数据类型
+  number
+  string
+  Boolean
+  undefined 未定义
+  null 空型
+     -->
+
+     <script>
+      // const num = 10
+      // console.log(num + +'11');
+
+      const num = 10 
+      console.log(typeof num + '11');//string  number11 直接和类型相连
+      console.log(typeof (num + '11'));//Number  string 没有显示转换
+      console.log(typeof (num + +'11'));//number  number  显示转换
+      
+     </script>
+</body>
+
+</html>

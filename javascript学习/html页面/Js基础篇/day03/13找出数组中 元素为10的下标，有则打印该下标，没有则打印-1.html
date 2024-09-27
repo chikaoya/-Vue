@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 找出数组中 元素为10的下标，有则打印该下标，没有则打印-1
+    let arr=[88,20,10,100,50]
+    let re = -1
+    for(let i=0;i<arr.length;i++){
+      if(arr[i]===10){
+        re = i//如果找到则把当前索引号赋值给 re， 如果没有找到，则默认的是 -1
+
+        // document.write(`该下标为${arr.length - i}`)
+
+        break// 已经找到就退出
+      }
+    }
+    console.log(re)
+  </script>
+</body>
+</html>

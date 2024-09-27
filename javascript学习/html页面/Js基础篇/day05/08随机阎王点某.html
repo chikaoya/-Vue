@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  /* let arr =['赵云','黄忠','关羽','张飞','马超','刘备','曹操']
+  // 得到一个随机数，作为数组的索引号，随机数为0~6
+  let random=Math.floor(Math.random()*arr.length)
+  // console.log(arr.length);
+  // 输出数组里的元素
+  console.log(arr[random]); */
+
+  // 随机点名改进 随机到之后不重复显示
+   let arr =['赵云','黄忠','关羽','张飞','马超','刘备','曹操']
+  //  得到一个随机数，作为数组的索引号，随机数为0~6
+   let random=Math.floor(Math.random()*arr.length)
+    // console.log(arr[arr.splice(random,1)]);
+    // 输出数组里的元素
+    document.write(arr[random])
+
+    // splice(起始位置(下标),删除几个元素)
+    arr.splice(random,1)
+    console.log(arr);
+  </script>
+</body>
+</html>

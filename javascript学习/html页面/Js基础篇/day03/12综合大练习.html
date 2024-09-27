@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 需求1:输入五个有效年龄，0-100，放入数组
+    let arr = []
+    let sum = 0
+    
+    for (let i = 0; i < 5; i++) {
+      let age = +prompt(`请输入第${i + 1}个有效年龄`)
+      //无效年龄不放进数组
+      if (age > 0 && age < 100) {
+        // arr[i]=age
+        arr.push(age)
+      }
+    }
+    console.log(arr);
+    // 需求2:打印所有成年人的年龄 >18
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i] >= 18) {
+        // console.log(`成年人的年龄有：${arr[i]}`);
+        document.write(`已经成人的年龄是: ${arr[i]} <br>`)
+      }
+    }
+    // 需求3:打印所有人总年龄 sum累加
+    for (i = 0; i < arr.length; i++) {
+      sum += arr[i]
+    }
+    // console.log(`所有人总年龄为:${sum}`);
+    document.write(`所有人的年龄是: ${sum} <br>`)
+    // 需求4:打印所有人平均年龄
+    document.write(`所有人平均年龄:${sum / arr.length}`)
+    // 需求5:打印最大年龄和最小年龄
+    let max = arr[0]
+    let min = arr[0]
+    for (i = 1; i < arr.length; i++) {
+      if (max < arr[i]) {
+        max = arr[i]
+      }
+    }
+    for (i = 1; i < arr.length; i++) {
+      if (min > arr[i]) {
+        min = arr[i]
+      }
+    }
+    
+    // console.log(`最大年龄为:${max}`)
+    // console.log(`最小年龄为:${min}`)
+    document.write(`最大年龄为:${max}`)
+    document.write(`最小年龄为:${min}`)
+    //sort 排序法
+    /* arr.sort(function (a, b) {
+      return a - b;
+    })
+   let  min = arr[0]
+  let max = [arr.length - 1]
+    document.write(`最大年龄为:${max}`)
+    document.write(`最小年龄为:${min}`) */
+  </script>
+</body>
+
+</html>

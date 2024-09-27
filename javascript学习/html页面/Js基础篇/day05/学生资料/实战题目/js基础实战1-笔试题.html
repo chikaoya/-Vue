@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>js基础-笔试题</title>
+</head>
+
+<body>
+  <script>
+      //   1. 声明age变量并赋值为18
+    let age =18
+      //   2. 声明uname, age, gender 多个变量
+    let uname='小明',
+    age2=18,
+    gender='男'
+      //   3. 定义数组，保存 小黑、小红、小花 三个人的名字
+    let arr=['小黑','小红','小花']
+      //   4. 写出for循环遍历数组的基本语法
+    for(i=0;i<arr.length;i++){
+      console.log(arr[i]);
+    }
+      //   5. 写出数字自增的做法有哪些
+    i++,++i
+      //   6. 写出if单分支、双分支、多分支语句
+    if(true){}
+    if(true){}else{}
+    if(true){}else if(true){}else{}
+      //   7. 请写出三元运算符的语法
+    1<2? 1 : 2
+      //   8. 请写出for循环的语法
+    for(i=0;i<100;i++){}
+      //   9. 写出数组的常用方法和对应的作用
+    不知道
+      //   10. 写出函数的语法
+      //         带有形参和返回值
+    function fu(x,y){
+      return x+y
+    }
+      //   11. 写出作用域有哪些
+    // 局部作用域，全局作用域
+    let num =1 //全局
+    function fun(){
+      let num=1 //局部作用域
+    }
+      //   12. 写出对象语法
+    let obj= {}
+      //   13. 写出遍历对象的语法
+    for(key in obj){}
+      //   14. 写出基本数据类型有哪5种
+    // String 字符型 Number 数字型 Boolean 布尔型 undefined 未定义型 null 空类型
+      //   15. 写出 转换为数值型常见方法
+    +prompt //前面加+ 显式转换 
+    Number('123')//强制转换
+    console.log(1 - '12') //隐式转换 * /都有隐式转换
+
+      //   16. 写出模板字符串使用方式
+    `   ${age}      `  //大大的反引号 然后用${} 刀了符 和花括号
+      //   17. 写出布尔类型的值为false 的值哪些
+    console.log(typeof(0));
+    console.log(typeof(null));
+    console.log(typeof(undefined));
+    console.log(typeof(NAN));
+
+      //   18. 写出  +加号的功能有哪些
+      +prompt //强制类型转换
+      
+  </script>
+</body>
+
+</html>
