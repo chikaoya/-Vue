@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 800px;
+      height: 80px;
+      border: 1px solid white;
+      margin: 0 auto;
+      margin-top: 300px;
+      line-height: 80px;
+      padding-left: 50px;
+      color: white;
+      font-size: 50px;
+    }
+  </style>
+</head>
+
+<body style="background-color: black;">
+  <div></div>
+  <script>
+    const div = document.querySelector('div')
+    // 获取最新时间
+    const date = new Date
+    // 这个写法也可以获得时间
+     div.innerHTML=date.toLocaleString()//2024/7/17 14:39:03
+    // div.innerHTML=date.toLocaleTimeString()//14:40:14
+    // div.innerHTML=date.toLocaleDateString()//2024/7/17
+
+    setInterval(function(){
+    const date = new Date
+
+    div.innerHTML=date.toLocaleString()//2024/7/17 14:39:03
+      
+    },1000)
+  </script>
+</body>
+
+</html>

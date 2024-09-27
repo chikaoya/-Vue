@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <div class="text">我是文字</div> -->
+  <div class="box">我是文字</div>
+  <script>
+    // const text=document.querySelector('.box')
+    // text.innerText='我是文字'
+    // console.log(text.innerText);
+
+    const box = document.querySelector('.box')
+    // box.innerText = '我是文字'
+    //不识别标签的innerText
+    // box.innerText = '<span>我是文字</span>'
+    console.log(box.innerText);
+
+    // 识别标签的innerHTML
+    box.innerHTML='<strong>我是变换</strong>'
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    const initDate=[{
+      stuId:1,
+      uname:'迪丽热巴',
+      age:18,
+      gender:'女',
+      salary:'12000',
+      city:'北京',
+      time:'20099/9/0 08:08:08'
+    }]
+    // 1.渲染业务
+    // localStorage.setItem('data',JSON.stringify(initDate))
+
+    // 1.1先读取本地存储的数据
+    // (1)本地存储有数据记得转换为对象然后存储到变量里面，后期用来渲染变量
+    // const arr = localStorage.getItem('data') //得到的是字符串
+    // 如果没有数据，则用 空数组代替
+    const arr = JSON.parse(localStorage.getItem('data')) || []  //得到的是数组
+    
+  </script>
+</body>
+</html>

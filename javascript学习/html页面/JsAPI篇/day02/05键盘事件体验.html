@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text">
+  <script>
+    const input =document.querySelector('input')
+    // 键盘按下监听
+    input.addEventListener('keydown',function(){
+      console.log('按');
+    })
+    // 键盘松下监听
+    input.addEventListener('keyup',function(){
+      console.log('松');
+    })
+    // 文本输入监听
+    input.addEventListener('input',function(){
+      console.log(input.value);
+
+    })
+  </script>
+</body>
+</html>

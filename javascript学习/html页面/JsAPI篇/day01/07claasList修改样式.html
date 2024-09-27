@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box"></div>
+  <script>
+    // 获取元素
+    const box = document.querySelector('.box')
+    // 修改样式
+    // 追加类add()  类名不加点，并且是字符串
+    box.classList.add('active')//会在原先的类名后加active
+
+    // 删除类 remove()  类名不加点，并且是字符串
+    box.classList.remove('box')  //删除box类名，
+
+    // 切换类 toggle()  有就删掉，没有加上
+    box.classList.toggle('active')
+  </script>
+</body>
+</html>

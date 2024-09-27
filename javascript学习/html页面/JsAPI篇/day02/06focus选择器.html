@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      width: 200px;
+      transition: 0.3s;
+    }
+    input:focus{
+      display: block;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text">
+  <script>
+    // 鼠标滑动识别
+    const input =document.querySelector('input')
+    input.addEventListener('mouseenter',function(){
+      input.display='block'
+      console.log('滑动');
+    })
+  </script>
+</body>
+</html>

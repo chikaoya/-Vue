@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="checkbox" name="" id="">
+  <button>点击</button>
+  <script>
+    // 获取表单
+    const ipt=document.querySelector('input')
+    // 修改表单选择样式
+    ipt.checked=true  //checked = true 是选择 =false 是不勾选
+    console.log(ipt.type);
+    // 修改按钮样式，变成不可选
+    const btn = document.querySelector('button')
+    btn.disabled = true  //disable 是不可选 默认为false 改为true 为可选
+  </script>
+</body>
+</html>

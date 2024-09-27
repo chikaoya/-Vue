@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>ahhha</li>
+  </ul>
+  <script>
+    const div = document.createElement('div')
+    // 追加节点 作为最后一个元素
+    document.body.appendChild(div)
+    // 获取父节点
+    const ul = document.querySelector('ul')
+    // 创建节点
+    const li = document.createElement('li')
+    // 给创造的节点添加文字
+    li.innerHTML='我是li'
+    //插入到前面
+    ul.appendChild(li)//插入到后面
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=], initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 开启定时器1.setInterval(函数名，间隔时间)
+    function fn(){
+      console.log('执行')
+    }
+    let n = setInterval(fn,500)
+    console.log(n);
+
+    // 开启定时器2.setInterval(function(){},间隔时间)
+    // let m = setInterval(function () {
+    //   console.log('五秒')
+    // } , 500)
+    // console.log(m);
+
+    // 关闭定时器
+      clearInterval(n)
+  </script>
+  
+</body>
+</html>
