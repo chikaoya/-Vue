@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 容器 -->
+  <div id="root">
+    <h2>{{name}}</h2>
+    <h2>当前的n值是：<span v-text="n"></span></h2>
+    <!-- <h2>放大10倍后的n值是：<span v-big-number="n"></span>-->
+      <h2>放大10倍后的n值是：<span v-big="n"></span></h2>
+      <button @click="n++">点我n+1</button>
+      <hr>
+      <input type="text " v-fbind:value="n">
+  </div>
+  <script src="../js/vue.js"></script>
+  <script>
+    Vue.config.productionTip = false//阻止vue启动时生产生产提示
+    //定义全局指令 directive没有s
+    Vue.directive('big',function(element,binding){
+        console.log('big',this)
+          element.innerText=binding.value*10
+    })
+    new Vue({
+			el:'#root',
+			data:{
+				name:'尚硅谷',
+				n:1
+			},
+      // 配置属性必要的参数
+      directives:{
+        // big(element,binding){
+        //   console.log('big',this)
+        //   element.innerText=binding.value*10
+        // },
+        fbind:{
+          // 指令与元素成功绑定时(一上来就会刷新)
+          bind(element,binding){
+            element.value=binding.value
+          },
+          // 指令所在元素被插入页面时
+          inserted(element,binding){
+            // 获取焦点
+            element.focus()
+          },
+          // 指令所在的模板被重新解析时
+          update(element,binding){
+            element.value=binding.value
+          }
+        }
+      }
+      })
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 容器 -->
+  <div id="root">
+    姓：<input type="text" v-model="firstName"><br><br>
+    名：<input type="text" v-model="lastName"><br><br>
+    <!-- 这里是调用方法形式 -->
+        全名:<span>{{fullName()}}</span>
+  </div>
+  <script src="../js/vue.js"></script>
+  <script>
+    Vue.config.productionTip = false//阻止vue启动时生产生产提示
+    new Vue({
+      el:'#root',
+      data:{
+        firstName:'章',
+        lastName:'散'
+      },
+      methods:{
+        fullName(){
+          console.log('@----fullName')
+          return this.firstName+'-'+this.lastName
+        }
+      }
+    })
+  </script>
+</body>
+</html>
