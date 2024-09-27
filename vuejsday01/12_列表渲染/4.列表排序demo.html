@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 容器 -->
+  <div id="root">
+    <h2>人员列表</h2>
+    <input type="text" placeholder="请输入名字" v-model="keyWord">
+    <button @click="sortType=2">年龄升序</button>
+    <button @click="sortType=1">年龄降序</button>
+    <!-- 因为原数组没有改变，所以点击原数组的时候，直接调用原来数组进行覆盖 -->
+    <button @click="sortType=0">原顺序</button>
+
+    <ul>
+      <!-- 完美的过滤器 -->
+      <li v-for="(p,index) of filPersons" :key="index">
+        {{p.name}}-{{p.age}}-{{p.sex}}
+      </li>
+    </ul>
+  </div>
+  <script src="../js/vue.js"></script>
+  <script>
+    Vue.config.productionTip = false//阻止vue启动时生产生产提示
+    new Vue({
+      el: '#root',
+      data: {
+        keyWord: '',
+        sortType:0,
+        persons: [
+          { id: '001', name: '马冬梅', age: 122, sex: '女' },
+          { id: '002', name: '周冬雨', age: 24, sex: '女' },
+          { id: '003', name: '周杰伦', age: 22, sex: '男' },
+          { id: '004', name: '温兆伦', age: 23, sex: '男' }
+        ]
+      },
+      computed: {
+        filPersons() {
+          // 过滤器会生成一个新的数组，然后用来返回该数组，因此在页面显示的时候需要调用新数组显示，但是新数组不能覆盖旧数组，否则会导致显示错误
+          // 过滤器生成的新数组用arr来接收，以便运用sort来排序
+          const arr= this.persons.filter((p) => {
+            return p.name.indexOf(this.keyWord) !== -1
+          })
+          // 判断是否需要排序
+          if(this.sortType){
+            arr.sort((p1,p2)=>{
+              // 复习sort(a,b),升序就是a-b,倒序就是b-a
+              return this.sortType===1? p2.age-p1.age : p1.age-p2.age
+            })
+          }
+          // 排序完之后的数组需要返回，所以页面可以显示排序完之后的数组
+          return arr
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
