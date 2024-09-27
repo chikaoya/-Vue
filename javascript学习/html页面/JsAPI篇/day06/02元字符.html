@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //*
+    console.log(/^哈*$/.test('哈')) //true
+    //+
+    console.log(/^哈+$/.test('哈')) //true
+    //?
+    console.log(/^哈?$/.test('哈')) //true
+
+    //{n} 精确 ===
+    console.log(/^哈{3}$/.test('哈'))//false
+    console.log(/^哈{3}$/.test('哈哈'))//false
+    console.log(/^哈{3}$/.test('哈哈哈'))//true
+
+    //{n,}  >=
+    console.log(/^哈{3,}$/.test('哈'))//false
+    console.log(/^哈{3,}$/.test('哈哈'))//false
+    console.log(/^哈{3,}$/.test('哈哈哈'))//true
+    console.log(/^哈{3,}$/.test('哈哈哈哈'))//true
+
+    //{n,m} >=n && <=m   逗号两旁不能有空格 不然会报错
+    console.log(/^哈{2,4}$/.test('哈'))//false
+    console.log(/^哈{2,4}$/.test('哈哈'))//true
+    console.log(/^哈{2,4}$/.test('哈哈哈'))//true
+    console.log(/^哈{2,4}$/.test('哈哈哈哈'))//true
+    console.log(/^哈{2,4}$/.test('哈哈哈哈'))//false
+
+    //字符型 [abc]  因为加了精确匹配 只选一个
+    console.log(/^[abc]$/.test('a'))//true
+    console.log(/^[abc]$/.test('b'))//true
+    console.log(/^[abc]$/.test('c'))//true
+    console.log(/^[abc]$/.test('ab'))//false
+    console.log(/^[abc]{2}$/.test('ab'))//true
+    console.log(/[abc]/.test('ab'))//true
+
+    //字符型 [a-z] 
+    console.log(/^[a-z]$/.test('a'))//true
+
+    console.log(/^[A-Z]$/.test('A'))//true
+    console.log(/^[A-Z]$/.test('a'))//false
+
+    console.log(/^[0-9]$/.test(2))//true
+    console.log(/^[a-zA-Z0-9]$/.test('a'))//true
+    console.log(/^[a-zA-Z0-9]$/.test(2))//true
+    console.log(/^[a-zA-Z0-9]$/.test('A'))//true
+  </script>
+</body>
+
+</html>

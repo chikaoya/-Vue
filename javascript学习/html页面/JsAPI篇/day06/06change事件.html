@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text">
+  <script>
+    // change事件 内容发生改变则验证一次
+    const input = document.querySelector('input')
+    input.addEventListener('change', function () {
+      console.log(111);
+    })
+
+    // 验证用户名
+    // 获取用户名表单
+    const username =document.querySelector('[name=username]')
+    username.addEventListener('click',verifyName)
+    // 封装verifyName函数
+    function verifyName(){
+      console.log(11);
+    }
+  </script>
+
+</body>
+
+</html>
