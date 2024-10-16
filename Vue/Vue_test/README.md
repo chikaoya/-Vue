@@ -1,4 +1,6 @@
-# 笔记
+# Vue02笔记 如需使用只需把文件名改成src
+#npm i 
+#npm run serve
 
 ## 脚手架文件结构
 
